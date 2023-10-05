@@ -83,23 +83,8 @@
     color: white;
   }
 
-  /*.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-  }
-
-  .fa-caret-down {
-    padding-right: 8px;
-  }*/
-
   .keskiosakel {
-    margin: 2%;
+    margin: 1% 1% 2% 2%;
     padding: 15px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233C1573FF' stroke-width='4' stroke-dasharray='12%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     background-color: #EFF1DB;
@@ -112,7 +97,7 @@
   }
 
   .keskiosapun {
-    margin: 2%;
+    margin: 1% 1% 2% 2%;
     padding: 15px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233C1573FF' stroke-width='4' stroke-dasharray='12%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     background-color: #ffd4db;
@@ -234,7 +219,7 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     .header {
-      padding: 40px;
+      padding: 70px;
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr;
