@@ -57,13 +57,13 @@
     font-size: 25px;
   }
 
-  .menu a {
+  .menu a, .dropbtn {
     color: black;
     text-decoration: none;
     display: block;
     padding: 5px 12px;
-    border-radius: 60px;
     background-color: #D3B5E5;
+    border-radius: 60px;
     border: 2px solid #3c1573;
     margin: 4px;
     cursor: pointer;
@@ -73,14 +73,42 @@
     font-family: 'Ubuntu', sans-serif;
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
   a.active {
     background-color: #3c1573;
     color: white;
   }
   
-  .menu a:hover {
+  .menu a:hover, .dropbtn:hover, .dropdown-content a:hover {
     background-color: #5920A9;
     color: white;
+  }
+
+  .dropdown-content {
+  display: none;
+  padding-left: 12px;
+  /*position: absolute;
+  z-index: 1;*/
+  width: 100%;
+  }
+
+  .dropdown-content a {
+    font-size: 16px;
+    padding: 3px 10px;
+  }
+
+  .fa-angle-down {
+    float: right;
+    padding-top: 4px;
+  }
+
+  .show {
+    display:block;
   }
 
   .keskiosakel {
@@ -130,12 +158,48 @@
   .footer {
     background-color: #D3B5E5;
     color:#3c1573;
-    text-align: center;
-    font-size: 16px;
-    padding: 15px;
+    font-size: 13px;
+    padding: 5px 8px;
     border: 2px solid #3c1573;
+    letter-spacing: 1;
+    text-align: right;
+    overflow: auto;
   }
   
+  input {
+    padding: 4px 10px;
+    margin: 3px 0px 12px 4px;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3c1573;
+    letter-spacing: 1;
+    font-size: 13px;
+    border: 2px solid #3c1573;
+    border-radius: 60px;
+  }
+
+  textarea {
+    border: 2px solid #3c1573;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 5px 6px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3c1573;
+    letter-spacing: 1;
+    font-size: 13px;
+    resize: none;
+  }
+
+  input[type=submit] {
+    border: 2px solid #3c1573;
+    padding: 5px 12px;
+    background-color: #EFF1DB;
+    border-radius: 60px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3c1573;
+    font-size: 15px;
+  }
+
   @media only screen and (max-width: 669px) {
     .header h1 {
       margin: 0px;
@@ -189,7 +253,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr;
-      column-gap: 10px;
+      column-gap: 25px;
     }
     .row {
       font-size: 18px;
@@ -201,6 +265,16 @@
     }
     h2 {
       font-size: 22px;
+    }
+    .footer {
+      padding: 15px;
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 10px;
+    }
+    .footer img {
+      float: right;
     }
   }
 
@@ -244,5 +318,15 @@
       position: -webkit-sticky;
       position: sticky;
       top: 0;
+  }
+  .footer {
+    padding: 15px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
+  .footer img {
+    float: left;
   }
   }

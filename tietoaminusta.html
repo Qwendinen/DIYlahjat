@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="diymuotoilu.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 </head>
 <body>
 
@@ -17,11 +18,31 @@
 <div class="row">
     <div class="col-3 col-s-3 menu">
         <a href="index.html">Etusivu</a>
-        <a href="pyykkietikka.html">Pyykkietikka</a>
-        <a href="suklaalevy.html">Suklaalevy</a>
-        <a href="kestovanulaput.html">Kestovanulaput</a>  
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Ohjeet<i class="fa fa-angle-down"></i></button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="pyykkietikka.html">Pyykkietikka</a>
+                <a href="suklaalevy.html">Suklaalevy</a>
+                <a href="kestovanulaput.html">Kestovanulaput</a>  
+            </div>
+        </div>
         <a class="active" href="tietoaminusta.html">Tietoa minusta</a>
     </div>
+
+    <script>
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+    </script>
 
     <div class="col-6 col-s-9">
         <div class="keskiosakel">
@@ -43,6 +64,7 @@
             </div>
             <div class="kuvapun">
                 <img src="villapaitauusi.jpg" alt="Neulottu villapaita">
+                <p style="font-size:13px; text-align: right; padding-top: 0px; margin-top: 3px;">Sivuston kuvat: Unsplash ja Salla Stjerna</p>
             </div>
         </div>
     </div>
@@ -51,15 +73,35 @@
         <div class="sivuosa">
             <h2>Vinkkejä</h2>
             <ul>
-                <li>Facebookista löytyy hyviä ryhmiä, joissa jaetaan DIY-lahjoihin ohjeita ja ideoita, ja joista voi pyytää neuvoja muilta jäseniltä. Yksi sellainen on nimeltään "DIY joululahjat".
-                <li>Jos haluaisit antaa itse tehtyjä lahjoja, mutta oma aika tai osaaminen ei riitä, facebookista löytyy myös edellä mainitun sisar-ryhmä: "DIY joululahjat myynti ja osto". Siellä tavoittaa taitavia tekijöitä ympäri Suomen.</li>
+                <li>Facebookista löytyy hyviä ryhmiä, joissa jaetaan DIY-lahjoihin ohjeita ja ideoita. Yksi sellainen on <a href="https://www.facebook.com/groups/3401879006516713/" target="_blank" style="color: #3c1573;">DIY joululahjat</a>.</li>
+                <li>Jos haluaisit antaa itse tehtyjä lahjoja, mutta oma aika tai osaaminen ei riitä, facebookista löytyy myös edellä mainitun sisar-ryhmä <a href="https://www.facebook.com/groups/1679921825742645/" target="_blank" style="color: #3c1573;">DIY joululahjat myynti ja osto</a>. Siellä tavoittaa taitavia tekijöitä ympäri Suomen.</li>
             </ul>
         </div>
     </div>
 </div>
 
 <div class="footer">
-  <p>Yhteystiedot: salla.kaurisalo@gmail.com</p>
+    <div class="alakuva">
+        <img src="kirjekuori.jpg" alt="kaunis kirjekuori" style="border: 20px solid #EFF1DB; max-width: 100%;">
+    </div>
+    <div class="lomake">
+        <h3 style="font-size: 18;">Ota yhteyttä</h3>
+        <p>Heräsikö ohjeista kysyttävää? Haluaisitko antaa palautetta niihin tai sivustoon liittyen?</p>
+        <p>Onko sinulla hyvä lahjaidea sivustolle lisättäväksi? Ota yhteyttä tällä lomakkeella!</p>
+        <form>
+            <label for="nimi">Nimi:</label>
+            <input type="text" id="nimi" name="nimi" size="35"><br>
+            <label for="sähköposti">e-mail:</label>
+            <input type="email" id="sähköposti" name="email" size="35"><br>
+            <textarea name="kirjoitus" id="viesti" rows="8" cols="35" placeholder="Kirjoita viesti..."></textarea><br>
+            <p>Haluatko viestiisi vastauksen?</p>
+            <input type="radio" id="kyllä" name="vastaus" value="Kyllä">
+            <label for="kyllä">Kyllä</label>
+            <input type="radio" id="ei" name="vastaus" value="Ei" style="margin-left: 26px;">
+            <label for="ei">Ei kiitos</label><br><br>
+            <input type="submit" value="Lähetä">
+        </form>
+    </div>
 </div>
 
 </body>
