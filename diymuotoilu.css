@@ -118,6 +118,10 @@
     background-color: #EFF1DB;
   }
 
+  .keskiosakel dt {
+    margin-top: 25px;
+  }
+
   .kuvakel img {
     max-width: 100%;
     height: auto;
@@ -129,6 +133,10 @@
     padding: 15px;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%233C1573FF' stroke-width='4' stroke-dasharray='12%2c 10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
     background-color: #ffd4db;
+  }
+
+  .keskiosapun li {
+    margin-top: 25px;
   }
 
   .kuvapun img {
