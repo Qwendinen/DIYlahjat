@@ -137,6 +137,19 @@
     padding: 5px;
   }
   
+  .laskuri {
+    color: #03370d;
+    text-align: center;
+    margin: 1%;
+    border: 50px solid;
+    border-image: url("laskurikuva.png") 100 round;
+  }
+
+  #demo {
+    font-size: 35px;
+    font-weight: 700;
+  }
+
   .sivuosa {
     margin: 2%;
     background-color: #D3B5E5;

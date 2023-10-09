@@ -86,12 +86,35 @@
     </div>
 
     <div class="col-3 col-s-12">
+        <div class="laskuri">
+            <h2 style="font-size: 26px; font-weight: 700;">Aikaa jouluaattoon:</h2>
+            <p id="demo"></p>
+            <script>
+            var countDownDate = new Date("Dec 24, 2023 00:00:00").getTime();
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("demo").innerHTML = days + " päivää"/* + hours + "t "
+                + minutes + "m " + seconds + "s "*/;
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "Hyvää joulua!";
+                }
+            }, 1000);
+            </script>
+        </div>
+
         <div class="sivuosa">
             <h2>Mikä DIY?</h2>
             <ul>
                 <li>DIY on lyhenne sanoista 'Do It Yourself', eli 'tee se itse'.</li>
                 <li>DIY-henkeen kuuluu olennaisesti kierrätys ja tuunaus.</li>
-                <li>Ihmisten ollessa tietoisempia kulutuskulttuurin ongelmista, itse tehdyt lahjat kasvattavat suosiotaan vuosi vuodelta.</li>
             </ul>
         </div>
     </div>
