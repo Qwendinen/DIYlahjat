@@ -53,7 +53,6 @@
   }
 
   h2 {
-    letter-spacing: 1;
     font-size: 25px;
   }
 
@@ -182,7 +181,6 @@
     font-size: 13px;
     padding: 5px 8px;
     border: 2px solid #3c1573;
-    letter-spacing: 1;
     text-align: right;
     overflow: auto;
   }
@@ -193,7 +191,7 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     color: #3c1573;
-    letter-spacing: 1;
+    letter-spacing: 0.5px;
     font-size: 13px;
     border: 2px solid #3c1573;
     border-radius: 60px;
@@ -206,7 +204,7 @@
     padding: 5px 6px;
     font-family: 'Ubuntu', sans-serif;
     color: #3c1573;
-    letter-spacing: 1;
+    letter-spacing: 0.5px;
     font-size: 13px;
     resize: none;
   }
@@ -280,7 +278,6 @@
       font-size: 18px;
     }
     .menu {
-      position: -webkit-sticky;
       position: sticky;
       top: 0;
     }
@@ -336,7 +333,6 @@
       column-gap: 10px;
     }
     .menu {
-      position: -webkit-sticky;
       position: sticky;
       top: 0;
   }
